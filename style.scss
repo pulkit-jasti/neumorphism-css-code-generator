@@ -1,0 +1,45 @@
+//COLORS
+$dark-red: #de5f5f;
+$bright-red: #ff5851;
+$yellow: #fdef52;
+$blue: #add8e6;
+$gray: #343436;
+$not-black-but-dark: #1c1b20;
+$silver: #f8f8f8;
+
+//GLOBAL STYLES
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+//MIXIN
+@mixin flexcenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin verticalCenter {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+//MAIN CSS
+main {
+	//overflow-x: hidden;
+	height: 100vh;
+	width: 100%;
+	background-color: lightcoral;
+}
+
+.sample-page {
+	height: 100vh;
+	width: 100%;
+	background-color: lightblue;
+}
