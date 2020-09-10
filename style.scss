@@ -76,9 +76,14 @@ main {
 			//background-color: #dfdfdf;
 			//background-color: #ecf0f3;
 			background-color: #fff;
+			@include flexcenter();
 
 			border-radius: 20px;
 			//box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+
+			img {
+				height: 70%;
+			}
 		}
 
 		#light-top-left {
@@ -89,16 +94,28 @@ main {
 		#light-top-right {
 			top: 0;
 			right: 0;
+
+			img {
+				transform: rotate(90deg);
+			}
 		}
 
 		#light-bottom-left {
 			bottom: 0;
 			left: 0;
+
+			img {
+				transform: rotate(270deg);
+			}
 		}
 
 		#light-bottom-right {
 			bottom: 0;
 			right: 0;
+
+			img {
+				transform: rotate(180deg);
+			}
 		}
 	}
 

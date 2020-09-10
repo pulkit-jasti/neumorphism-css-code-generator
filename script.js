@@ -31,38 +31,49 @@ let tr = document.getElementById('light-top-right');
 let bl = document.getElementById('light-bottom-left');
 let br = document.getElementById('light-bottom-right');
 
-tl.addEventListener('click', () => {
+function lightIconReset() {
+	tl.innerHTML = '';
+	tr.innerHTML = '';
+	bl.innerHTML = '';
+	br.innerHTML = '';
+}
+
+tl.addEventListener('click', function () {
 	left = '';
 	right = '-';
 	Top = '';
 	bottom = '-';
 	updateValues();
-	console.log('top left clicked');
+	lightIconReset();
+	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
 });
 
-tr.addEventListener('click', () => {
+tr.addEventListener('click', function () {
 	left = '-';
 	right = '';
 	Top = '';
 	bottom = '-';
 	updateValues();
-	console.log('top right clicked');
+	lightIconReset();
+	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
 });
 
-bl.addEventListener('click', () => {
+bl.addEventListener('click', function () {
 	left = '';
 	right = '-';
 	Top = '-';
 	bottom = '';
 	updateValues();
-	console.log('bottom left clicked');
+	lightIconReset();
+	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
 });
 
-br.addEventListener('click', () => {
+br.addEventListener('click', function () {
 	left = '-';
 	right = '';
 	Top = '-';
 	bottom = '';
 	updateValues();
-	console.log('bottom right clicked');
+	lightIconReset();
+	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
 });
