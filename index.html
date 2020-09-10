@@ -11,7 +11,7 @@
 	<body>
 		<main class="main-page">
 			<div class="box-container">
-				<div class="box"></div>
+				<div id="box" class="box"></div>
 				<div id="light-top-left"></div>
 				<div id="light-top-right"></div>
 				<div id="light-bottom-left"></div>
@@ -20,13 +20,13 @@
 			<div class="settings-container">
 				<form action="">
 					<label for="size">Size</label>
-					<input id="size" type="range" min="50" max="250" />
+					<input id="size" type="range" min="50" max="280" />
+					<label for="radius">Border Radius</label>
+					<input id="radius" type="range" min="0" max="150" />
 					<label for="blur">Blur</label>
 					<input id="blur" type="range" />
 					<label for="distance">Distance</label>
-					<input id="distance" type="range" />
-					<label for="radius">Border Radius</label>
-					<input id="radius" type="range" />
+					<input id="distance" type="range" min="0" max="30" />
 				</form>
 			</div>
 		</main>
