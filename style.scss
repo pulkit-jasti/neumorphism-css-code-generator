@@ -51,11 +51,12 @@ main {
 		justify-content: center;
 		align-items: center;
 
-		.box {
-			height: 200px;
-			width: 200px;
+		#box {
+			height: 280px;
+			width: 280px;
 			background-color: #ecf0f3;
 			@include flexcenter();
+			flex-wrap: wrap;
 
 			border-radius: 40px;
 			box-shadow: 15px 15px 20px #cbced1, -15px -15px 20px #fff;
@@ -66,11 +67,21 @@ main {
 				box-shadow: none !important;
 			}
 
-			.box-2 {
+			* {
+				border-radius: 10px !important;
+
 				transition-duration: 500ms;
 
 				&:hover {
 					box-shadow: none !important;
+				}
+			}
+
+			.small-box-wrapper {
+				.small-box {
+					width: 70px;
+					height: 70px;
+					margin: 20px;
 				}
 			}
 		}

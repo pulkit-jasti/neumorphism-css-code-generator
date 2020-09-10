@@ -9,7 +9,9 @@ let blur = document.getElementById('blur');
 let dist = document.getElementById('distance');
 
 let sliders = document.querySelectorAll('.slider');
-console.log(sliders);
+
+let UIsample = document.querySelectorAll('.UIsample');
+console.log(UIsample);
 
 let left = '';
 let right = '-';
@@ -17,17 +19,12 @@ let Top = '';
 let bottom = '-';
 
 function updateValues() {
-	box.style.width = `${size.value}px`;
-	box.style.height = `${size.value}px`;
-	box.style.borderRadius = `${rad.value}px`;
-	box.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
+	UIsample.forEach(e => {
+		e.style.borderRadius = `${rad.value}px`;
+		e.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
+	});
 
-	box2.style.width = `${size.value - 130}px`;
-	box2.style.height = `${size.value - 130}px`;
-	box2.style.borderRadius = `${rad.value - 10}px`;
-	box2.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
-
-	console.clear();
+	//console.clear();
 	console.log(size.value);
 	console.log(rad.value);
 	console.log(blur.value);
