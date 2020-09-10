@@ -57,8 +57,13 @@ main {
 			background-color: #ecf0f3;
 
 			border-radius: 40px;
-
 			box-shadow: 15px 15px 20px #cbced1, -15px -15px 20px #fff;
+
+			transition-duration: 500ms;
+
+			&:hover {
+				box-shadow: none !important;
+			}
 		}
 
 		#light-top-left,
@@ -69,10 +74,11 @@ main {
 			height: 90px;
 			width: 90px;
 			//background-color: #dfdfdf;
-			background-color: #ecf0f3;
+			//background-color: #ecf0f3;
+			background-color: #fff;
 
 			border-radius: 20px;
-			box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+			//box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
 		}
 
 		#light-top-left {
