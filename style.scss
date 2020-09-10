@@ -55,6 +55,7 @@ main {
 			height: 200px;
 			width: 200px;
 			background-color: #ecf0f3;
+			@include flexcenter();
 
 			border-radius: 40px;
 			box-shadow: 15px 15px 20px #cbced1, -15px -15px 20px #fff;
@@ -63,6 +64,14 @@ main {
 
 			&:hover {
 				box-shadow: none !important;
+			}
+
+			.box-2 {
+				transition-duration: 500ms;
+
+				&:hover {
+					box-shadow: none !important;
+				}
 			}
 		}
 
@@ -84,11 +93,19 @@ main {
 			img {
 				height: 70%;
 			}
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 
 		#light-top-left {
 			top: 0;
 			left: 0;
+
+			img {
+				transform: rotate(90deg);
+			}
 		}
 
 		#light-top-right {
@@ -96,7 +113,7 @@ main {
 			right: 0;
 
 			img {
-				transform: rotate(90deg);
+				transform: rotate(180deg);
 			}
 		}
 
@@ -105,7 +122,7 @@ main {
 			left: 0;
 
 			img {
-				transform: rotate(270deg);
+				transform: rotate(0deg);
 			}
 		}
 
@@ -114,7 +131,7 @@ main {
 			right: 0;
 
 			img {
-				transform: rotate(180deg);
+				transform: rotate(270deg);
 			}
 		}
 	}

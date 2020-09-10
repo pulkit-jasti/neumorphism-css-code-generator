@@ -1,4 +1,7 @@
+let lightSourceIconPath = 'images/flashlight.png';
+
 let box = document.getElementById('box');
+let box2 = document.getElementById('box-2');
 
 let size = document.getElementById('size');
 let rad = document.getElementById('radius');
@@ -18,6 +21,17 @@ function updateValues() {
 	box.style.height = `${size.value}px`;
 	box.style.borderRadius = `${rad.value}px`;
 	box.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
+
+	box2.style.width = `${size.value - 130}px`;
+	box2.style.height = `${size.value - 130}px`;
+	box2.style.borderRadius = `${rad.value - 10}px`;
+	box2.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
+
+	console.clear();
+	console.log(size.value);
+	console.log(rad.value);
+	console.log(blur.value);
+	console.log(dist.value);
 }
 
 sliders.forEach(e => {
@@ -31,12 +45,13 @@ let tr = document.getElementById('light-top-right');
 let bl = document.getElementById('light-bottom-left');
 let br = document.getElementById('light-bottom-right');
 
-function lightIconReset() {
+let lightIconReset = source => {
 	tl.innerHTML = '';
 	tr.innerHTML = '';
 	bl.innerHTML = '';
 	br.innerHTML = '';
-}
+	source.innerHTML = `<img src="${lightSourceIconPath}" alt="" />`;
+};
 
 tl.addEventListener('click', function () {
 	left = '';
@@ -44,8 +59,7 @@ tl.addEventListener('click', function () {
 	Top = '';
 	bottom = '-';
 	updateValues();
-	lightIconReset();
-	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
+	lightIconReset(this);
 });
 
 tr.addEventListener('click', function () {
@@ -54,8 +68,7 @@ tr.addEventListener('click', function () {
 	Top = '';
 	bottom = '-';
 	updateValues();
-	lightIconReset();
-	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
+	lightIconReset(this);
 });
 
 bl.addEventListener('click', function () {
@@ -64,8 +77,7 @@ bl.addEventListener('click', function () {
 	Top = '-';
 	bottom = '';
 	updateValues();
-	lightIconReset();
-	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
+	lightIconReset(this);
 });
 
 br.addEventListener('click', function () {
@@ -74,6 +86,5 @@ br.addEventListener('click', function () {
 	Top = '-';
 	bottom = '';
 	updateValues();
-	lightIconReset();
-	this.innerHTML = '<img src="images/flashlight.png" alt="" />';
+	lightIconReset(this);
 });
