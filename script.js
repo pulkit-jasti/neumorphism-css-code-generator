@@ -2,8 +2,26 @@ let box = document.getElementById('box');
 
 let size = document.getElementById('size');
 let rad = document.getElementById('radius');
+let blur = document.getElementById('blur');
 let dist = document.getElementById('distance');
 
+let sliders = document.querySelectorAll('.slider');
+console.log(sliders);
+
+function updateValues() {
+	box.style.width = `${size.value}px`;
+	box.style.height = `${size.value}px`;
+	box.style.borderRadius = `${rad.value}px`;
+	box.style.boxShadow = `${dist.value}px ${dist.value}px ${blur.value}px #cbced1, -${dist.value}px -${dist.value}px ${blur.value}px #fff`;
+}
+
+sliders.forEach(e => {
+	e.addEventListener('input', updateValues);
+});
+
+updateValues();
+
+/*
 size.addEventListener('input', function () {
 	box.style.width = `${this.value}px`;
 	box.style.height = `${this.value}px`;
@@ -17,3 +35,4 @@ dist.addEventListener('input', function () {
 	box.style.boxShadow = `${this.value}px ${this.value}px 20px #cbced1, -${this.value}px -${this.value}px 20px #fff`;
 	console.log(this.value);
 });
+*/
