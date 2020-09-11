@@ -175,8 +175,8 @@ main {
 				-webkit-transition: 0.2s;
 				transition: opacity 0.2s;
 
+				border: none;
 				border-radius: 20px;
-				//box-shadow: 6px 6px 8px #cbced1, -6px -6px 8px #fff !important;
 				box-shadow: 5px 5px 5px #cbced1, -5px -5px 5px #fff;
 			}
 
@@ -196,6 +196,10 @@ main {
 				height: $slider-thumb-height;
 				background: $slider-thumb-color;
 				cursor: pointer;
+
+				border: none;
+				border-radius: 20px;
+				box-shadow: 5px 5px 5px #cbced1, -5px -5px 5px #fff !important;
 			}
 		}
 
