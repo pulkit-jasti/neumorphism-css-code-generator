@@ -43,12 +43,6 @@ function updateValues() {
 
 	snippet = `border-radius: ${rad.value}px;\nbox-shadow: ${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1,\n            ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff;`;
 	output.value = snippet;
-
-	//console.clear();
-	console.log(size.value);
-	console.log(rad.value);
-	console.log(blur.value);
-	console.log(dist.value);
 }
 
 document.querySelectorAll('.slider').forEach(e => {
