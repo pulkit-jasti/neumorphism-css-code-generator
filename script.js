@@ -1,8 +1,7 @@
 let lightSourceIconPath = 'images/flashlight.png';
-
 let output = document.getElementById('output');
-
 let box = document.getElementById('box');
+let copyText = document.getElementById('copy');
 
 let size = document.getElementById('size');
 let rad = document.getElementById('radius');
@@ -14,6 +13,27 @@ let right = '-';
 let Top = '';
 let bottom = '-';
 
+function copyToClipboard(copyClip) {
+	const el = document.createElement('textarea');
+	el.value = copyClip;
+	el.setAttribute('readonly', '');
+	el.style.position = 'absolute';
+	el.style.left = '-9999px';
+	document.body.appendChild(el);
+	el.select();
+	document.execCommand('copy');
+	document.body.removeChild(el);
+}
+
+let snippet = '';
+copyText.addEventListener('click', function () {
+	copyToClipboard(snippet);
+	this.innerHTML = 'Copied!';
+	setTimeout(() => {
+		this.innerHTML = 'Copy';
+	}, 2000);
+});
+
 function updateValues() {
 	box.style.transform = `scale(${size.value},${size.value})`;
 	document.querySelectorAll('.UIsample').forEach(e => {
@@ -21,7 +41,8 @@ function updateValues() {
 		e.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
 	});
 
-	output.value = `border-radius: ${rad.value}px;\nbox-shadow: ${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1,\n            ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff;`;
+	snippet = `border-radius: ${rad.value}px;\nbox-shadow: ${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1,\n            ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff;`;
+	output.value = snippet;
 
 	//console.clear();
 	console.log(size.value);
