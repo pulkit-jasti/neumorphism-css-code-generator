@@ -137,11 +137,11 @@ main {
 	}
 
 	.settings-container {
-		height: 500px;
+		height: 520px;
 		width: 500px;
 		background-color: $primary-color;
 		padding: 40px;
-		border-radius: 40px;
+		border-radius: 20px;
 		box-shadow: 7px 7px 19px #cbced1, -7px -7px 19px #fff;
 
 		display: flex;
@@ -200,10 +200,13 @@ main {
 		}
 
 		.output {
-			height: 240px;
+			height: 180px;
 			background-color: $primary-color;
 			padding: 25px;
 			resize: none;
+
+			line-height: 25px;
+			font-size: 1.2rem;
 
 			border: none;
 			outline: none;
@@ -216,6 +219,29 @@ main {
 
 			&::-webkit-scrollbar {
 				display: none;
+			}
+		}
+
+		.copy {
+			padding: 13px 0;
+			background-color: $primary-color;
+
+			font-size: 1.3rem;
+			font-weight: 700;
+
+			border: none;
+			outline: none;
+			border-radius: 15px;
+
+			box-shadow: 7px 7px 14px #cbced1, -7px -7px 14px #fff;
+			transition-duration: 300ms;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			&:active {
+				box-shadow: none;
 			}
 		}
 	}

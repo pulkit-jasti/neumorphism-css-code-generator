@@ -1,7 +1,8 @@
 let lightSourceIconPath = 'images/flashlight.png';
 
+let output = document.getElementById('output');
+
 let box = document.getElementById('box');
-let box2 = document.getElementById('box-2');
 
 let size = document.getElementById('size');
 let rad = document.getElementById('radius');
@@ -19,6 +20,8 @@ function updateValues() {
 		e.style.borderRadius = `${rad.value}px`;
 		e.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
 	});
+
+	output.value = `border-radius: ${rad.value}px;\nbox-shadow: ${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1,\n            ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff;`;
 
 	//console.clear();
 	console.log(size.value);
