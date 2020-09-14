@@ -41,7 +41,7 @@ function updateValues() {
 		e.style.boxShadow = `${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1, ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff`;
 	});
 
-	snippet = `border-radius: ${rad.value}px;\nbox-shadow: ${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1,\n            ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff;`;
+	snippet = `background-color: #e6e7ee;\nborder-radius: ${rad.value}px;\nbox-shadow: ${left}${dist.value}px ${Top}${dist.value}px ${blur.value}px #cbced1,\n            ${right}${dist.value}px ${bottom}${dist.value}px ${blur.value}px #fff;`;
 	output.value = snippet;
 }
 
